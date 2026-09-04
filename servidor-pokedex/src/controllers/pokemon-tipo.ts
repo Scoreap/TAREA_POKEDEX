@@ -18,4 +18,6 @@ export async function getPokemon(req: Request, res: Response) {
     imagen: data.sprites.other["official-artwork"].front_default,
     tipos: data.types.map((t: any) => t.type.name),
   });
+
+  
 }

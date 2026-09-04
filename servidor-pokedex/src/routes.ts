@@ -1,7 +1,9 @@
-import express from "express";
+import { Router } from "express";
+import { getPokemon } from "./controllers/pokemon";
 
-export const router = express.Router();
+export const router = Router();
 
-router.get("/pokemon", (req, res) => {
-  res.json({ ok: true, message: "API de pok�dex funcionando" });
-});
+// método + dirección → controlador. La ruta NO resuelve nada.
+router.get("/pokemon/:nombre", getPokemon);
+
+router.get("/pokemon/:type", getPokemon);
