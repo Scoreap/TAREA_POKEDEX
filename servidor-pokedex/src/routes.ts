@@ -1,9 +1,11 @@
 import { Router } from "express";
-import { getPokemon } from "./controllers/pokemon";
+import { getPokemonPorNombre } from "./controllers/pokemon";
+import { getPokemonPorTipo } from "./controllers/pokemon-tipo";
 
 export const router = Router();
 
-// método + dirección → controlador. La ruta NO resuelve nada.
-router.get("/pokemon/:nombre", getPokemon);
+// GET /api/pokemon/:nombre → detalle de un Pokémon (búsqueda por nombre).
+router.get("/pokemon/:nombre", getPokemonPorNombre);
 
-router.get("/pokemon/:type", getPokemon);
+// GET /api/pokemon/type/:type → lista de Pokémon del tipo (búsqueda por tipo).
+router.get("/pokemon/type/:type", getPokemonPorTipo);

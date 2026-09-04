@@ -24,16 +24,11 @@
 
     <main class="container">
       <div class="toolbar">
+        <select id="search-mode" aria-label="Tipo de búsqueda">
+          <option value="nombre">Buscar por: Nombre</option>
+          <option value="tipo">Buscar por: Tipo</option>
+        </select>
         <input type="search" id="search-input" placeholder="Buscar Pokémon..." />
-        <select id="generation-filter" aria-label="Filtrar por generación">
-          <option value="">Todas las generaciones</option>
-        </select>
-        <select id="type1-filter" aria-label="Filtrar por tipo primario">
-          <option value="">Tipo 1: cualquiera</option>
-        </select>
-        <select id="type2-filter" aria-label="Filtrar por tipo secundario">
-          <option value="">Tipo 2: cualquiera</option>
-        </select>
       </div>
 
       <p id="state-message" class="state-message hidden"></p>
