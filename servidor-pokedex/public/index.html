@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&family=VT323&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/base.css" />
@@ -16,8 +16,12 @@
   <body>
     <header class="site-header">
       <div class="container">
-        <a href="index.html">
-          <h1><span class="pokeball" aria-hidden="true"></span>Pokédex</h1>
+        <a href="index.html" class="brand">
+          <span class="pokeball" aria-hidden="true"></span>
+          <h1 class="brand-logo">
+            <span class="brand-logo__title">Pokédex</span>
+            <span class="brand-logo__subtitle">Grupo 6</span>
+          </h1>
         </a>
       </div>
     </header>
@@ -45,6 +49,19 @@
         <button type="button" id="next-page" class="btn">Siguiente</button>
       </div>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="site-footer__title">Grupo 6 - Programación Web</p>
+        <ul class="team-list">
+          <li>Sophia Corea</li>
+          <li>Cristopher López</li>
+          <li>Jose Rodrigo Herrera</li>
+          <li>Michael Gutiérrez</li>
+          <li>Josué Reyes</li>
+        </ul>
+      </div>
+    </footer>
 
     <script type="module" src="js/home.js"></script>
   </body>
