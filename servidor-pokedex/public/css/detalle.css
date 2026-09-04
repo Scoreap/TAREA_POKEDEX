@@ -1,0 +1,29 @@
+/* Estilos de la vista Detalle (Persona B) */
+
+.pokemon-detail {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+}
+
+.pokemon-detail__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.pokemon-detail__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.evolution-chain {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+/* TODO (Persona B): sprites, stats, habilidades, cadena de evolución */
