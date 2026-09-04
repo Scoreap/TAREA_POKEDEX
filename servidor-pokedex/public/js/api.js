@@ -29,3 +29,7 @@ export function getEvolutionChain(url) {
 export function getType(idOrName) {
   return fetchJSON(`${BASE_URL}/type/${idOrName}`);
 }
+
+export function getGeneration(idOrName) {
+  return fetchJSON(`${BASE_URL}/generation/${idOrName}`);
+}

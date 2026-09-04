@@ -2,32 +2,95 @@
 
 .toolbar {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-sm);
 }
 
 .toolbar input,
 .toolbar select {
+  font-family: var(--font-retro);
+  font-size: 1.1rem;
   padding: var(--spacing-sm);
-  border: 1px solid var(--color-border);
+  border: 3px solid var(--color-border-dark);
   border-radius: var(--radius);
-  font-size: 1rem;
+  background-color: var(--color-panel);
+  color: var(--color-text);
+}
+
+.toolbar input {
+  flex: 1 1 220px;
+}
+
+.toolbar input:focus,
+.toolbar select:focus {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 1px;
 }
 
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: var(--spacing-md);
 }
 
 .pokemon-card {
-  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: var(--color-panel);
+  border: 3px solid var(--color-border-dark);
   border-radius: var(--radius);
+  box-shadow: 0 0 0 2px var(--color-gold), 0 4px 0 var(--color-border-dark);
   padding: var(--spacing-md);
   text-align: center;
   text-decoration: none;
   color: var(--color-text);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.08s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-3px);
+}
+
+.pokemon-card__number {
+  align-self: flex-start;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+}
+
+.pokemon-card__sprite {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+}
+
+.pokemon-card__name {
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.pokemon-card__types {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.type-badge {
+  font-family: var(--font-retro);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  color: var(--color-panel);
+  padding: 2px 8px;
+  border: 2px solid var(--color-border-dark);
+  border-radius: 999px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
 }
 
 .pagination {
@@ -36,5 +99,3 @@
   gap: var(--spacing-sm);
   margin-top: var(--spacing-lg);
 }
-
-/* TODO (Persona A): tarjetas, filtros por tipo, paginación/scroll infinito */

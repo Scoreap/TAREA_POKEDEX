@@ -4,21 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokédex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container">
-        <a href="index.html"><h1>Pokédex</h1></a>
+        <a href="index.html">
+          <h1><span class="pokeball" aria-hidden="true"></span>Pokédex</h1>
+        </a>
       </div>
     </header>
 
     <main class="container">
       <div class="toolbar">
         <input type="search" id="search-input" placeholder="Buscar Pokémon..." />
-        <select id="type-filter" aria-label="Filtrar por tipo">
-          <option value="">Todos los tipos</option>
+        <select id="generation-filter" aria-label="Filtrar por generación">
+          <option value="">Todas las generaciones</option>
+        </select>
+        <select id="type1-filter" aria-label="Filtrar por tipo primario">
+          <option value="">Tipo 1: cualquiera</option>
+        </select>
+        <select id="type2-filter" aria-label="Filtrar por tipo secundario">
+          <option value="">Tipo 2: cualquiera</option>
         </select>
       </div>
 
