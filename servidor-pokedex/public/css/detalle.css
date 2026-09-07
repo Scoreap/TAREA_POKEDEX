@@ -1,29 +1,270 @@
 /* Estilos de la vista Detalle (Persona B) */
 
 .pokemon-detail {
-  background-color: var(--color-surface);
+  background-color: var(--color-panel);
+  border: 3px solid var(--color-border-dark);
   border-radius: var(--radius);
+  box-shadow: 0 0 0 3px var(--color-border-light);
   padding: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
 }
+
+/* Encabezado principal */
 
 .pokemon-detail__header {
   display: flex;
   align-items: center;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 3px solid var(--color-border-dark);
+}
+
+.pokemon-detail__main-image {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg);
+  border: 3px solid var(--color-border-dark);
+  border-radius: var(--radius);
+}
+
+.pokemon-detail__main-image img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.pokemon-detail__info {
+  flex: 1;
+}
+
+.pokemon-detail__number {
+  display: inline-block;
+  font-family: var(--font-pixel);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.pokemon-detail__info h1 {
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.pokemon-detail__info p {
+  margin-top: var(--spacing-sm);
+}
+
+/* Tipos */
+
+.pokemon-detail__types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.type-badge {
+  display: inline-block;
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  background-color: var(--color-green);
+  color: var(--color-panel);
+  border: 2px solid var(--color-border-dark);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm);
+}
+
+/* Secciones */
+
+.pokemon-detail__section {
+  margin-top: var(--spacing-lg);
+}
+
+.pokemon-detail__section h2 {
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-border-dark);
+}
+
+/* Habilidades */
+
+.pokemon-detail__abilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.pokemon-detail__abilities li {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border-dark);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+/* Sprites */
+
+.pokemon-detail__sprites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: var(--spacing-md);
 }
 
+.sprite-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border-dark);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm);
+}
+
+.sprite-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.sprite-card span {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  text-align: center;
+}
+
+/* Estadísticas */
+
 .pokemon-detail__stats {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-md);
 }
+
+.stat-card {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border-dark);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+}
+
+.stat-card span {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-card strong {
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+}
+
+.stat-bar {
+  height: 12px;
+  background-color: var(--color-panel);
+  border: 2px solid var(--color-border-dark);
+  margin-top: var(--spacing-sm);
+  overflow: hidden;
+}
+
+.stat-bar__fill {
+  height: 100%;
+  background-color: var(--color-red);
+}
+
+/* Cadena de evolución */
 
 .evolution-chain {
   display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
+  justify-content: center;
   margin-top: var(--spacing-lg);
+  overflow-x: auto;
 }
 
-/* TODO (Persona B): sprites, stats, habilidades, cadena de evolución */
+.evolution-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.evolution-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border-dark);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm);
+}
+
+.evolution-card:hover {
+  background-color: var(--color-gold);
+}
+
+.evolution-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.evolution-card span {
+  color: var(--color-text-muted);
+}
+
+.evolution-card strong {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  margin-top: var(--spacing-xs);
+}
+
+.evolution-arrow {
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+  margin: var(--spacing-sm);
+}
+
+.evolution-next {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .pokemon-detail {
+    padding: var(--spacing-md);
+  }
+
+  .pokemon-detail__header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pokemon-detail__main-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .pokemon-detail__types {
+    justify-content: center;
+  }
+
+  .pokemon-detail__abilities {
+    justify-content: center;
+  }
+
+  .evolution-next {
+    flex-direction: column;
+  }
+}
